@@ -15,9 +15,15 @@
  */
 
 buildscript {
-    ext.kotlin_version = '1.4.30'
-    ext.compose_version = '1.0.0-beta01'
-    ext.coroutines_version = '1.4.2'
+
+    ext {
+        kotlin_version = '1.4.30'
+        compose_version = '1.0.0-beta01'
+        coroutines_version = '1.4.2'
+        sqldelight_version = '1.4.4'
+        koin_version = '2.2.2'
+        accompanist_version = '0.6.1'
+    }
 
     repositories {
         google()
@@ -27,6 +33,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.0-alpha08'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.squareup.sqldelight:gradle-plugin:$sqldelight_version"
     }
 }
 
