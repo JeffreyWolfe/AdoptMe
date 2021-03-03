@@ -1,0 +1,32 @@
+CREATE TABLE pet (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    age INTEGER AS Int NOT NULL,
+    sex TEXT CHECK( sex IN ('M', 'F') ) NOT NULL,
+    description TEXT,
+    image TEXT NOT NULL
+);
+
+CREATE INDEX pet_name ON pet(name, age, sex, image, description);
+
+selectAll:
+SELECT *
+FROM pet;
+
+selectByAgeRange:
+SELECT *
+FROM pet
+WHERE age = BETWEEN ? AND ?
+ORDER BY age ASC;
+
+insert:
+INSERT INTO pet(name, age, sex, image)
+VALUES (?, ?, ?, ?);
+
+insertWithDescription:
+INSERT INTO pet(name, age, sex, image, description)
+VALUES (?, ?, ?, ?, ?);
+
+insertFullPetObject:
+INSERT OR REPLACE INTO pet(id, name, age, sex, description, image)
+VALUES ?;
