@@ -1,31 +1,34 @@
-# Template repository
+# AdoptMe
 
-Template repository for the Jetpack Compose [#AndroidDevChallenge](https://developer.android.com/dev-challenge).
+![Workflow result](https://github.com/JeffreyWolfe/AdoptMe/workflows/Check/badge.svg)
 
-## Getting started
-Copy this repository by pressing the "Use this template" button in Github.
-Clone your repository and open it in the latest [Android Studio (Canary build)](https://developer.android.com/studio/preview).
+## :scroll: Description
+Entry for the Jetpack Compose Dev Challenge.
 
-## Submission requirements
-- Follow the challenge description on the project website: [developer.android.com/dev-challenge](https://developer.android.com/dev-challenge)
-- All UI should be written using Jetpack Compose
-- The Github Actions workflow should complete successfully
-- Include two screenshots of your submission in the [results](results) folder. The names should be
-  screenshot_1.png and screenshot_2.png.
-- Include a screen record of your submission in the [results](results) folder. The name should be
-  video.mp4
-- Replace the contents of [README.md](README.md) with the contents of [README-template.md](README-template.md) and fill out the template.
+This is a really simple app that shows a list of Pets and shows Details for each one on click.
+The used data is all placeholder data that gets stored in a sqldelight backed database.
+All Sample Images are downloaded from [placekitten.com](https://placekitten.com)
 
-## Code formatting
-The CI uses [Spotless](https://github.com/diffplug/spotless) to check if your code is formatted correctly and contains the right licenses.
-Internally, Spotless uses [ktlint](https://github.com/pinterest/ktlint) to check the formatting of your code.
-To set up ktlint correctly with Android Studio, follow one of the [listed setup options](https://github.com/pinterest/ktlint#-with-intellij-idea).
+Thx to Kathi for the paw print Image Mask!
 
-Before committing your code, run `./gradlew app:spotlessApply` to automatically format your code.
+
+## :bulb: Motivation and Context
+I haven't done any development for android in a while and felt the need to freshen up on my Android knowledge.
+While researching what's current in Android dev i stumbled upon Jetpack compose and got instantly interested.
+A replacement for the admittedly often quite cumbersome Android Widgets using a declarative approach felt quite welcome to me.
+I was following [Flutter](https://flutter.dev/) for a bit and really liked what they were doing but didn't really feel like learning Dart for an UI Framework.
+
+## Challenges and Problems
+The composables get sometimes overdrawn when scrolling and don't show their content anymore
+
+## :camera_flash: Screenshots
+<!-- You can add more screenshots here if you like -->
+<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
 
 ## License
 ```
 Copyright 2020 The Android Open Source Project
+Copyright 2021 Jeffrey Wolfe
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
